@@ -25,7 +25,7 @@ from __future__ import division
 import itertools
 
 # Imports from third-party libraries.
-from networkx import from_numpy_matrix
+from networkx import from_numpy_array
 from networkx.algorithms.bipartite.matching import maximum_matching
 import numpy as np
 
@@ -198,7 +198,7 @@ def birkhoff_von_neumann_decomposition(D):
         # is ``W``).
         X = to_bipartite_matrix(W)
         # Convert the matrix of a bipartite graph into a NetworkX graph object.
-        G = from_numpy_matrix(X)
+        G = from_numpy_array(X)
         # Compute a perfect matching for this graph. The dictionary `M` has one
         # entry for each matched vertex (in both the left and the right vertex
         # sets), and the corresponding value is its partner.
